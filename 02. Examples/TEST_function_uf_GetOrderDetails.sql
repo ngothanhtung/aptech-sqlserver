@@ -1,0 +1,1 @@
+SELECT * FROM dbo.uf_GetOrderDetails(4)
