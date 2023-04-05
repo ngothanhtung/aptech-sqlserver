@@ -1,2 +1,1 @@
-SELECT * FROM Products
-WHERE Stock <= 5
+SELECT * FROM Products WHERE Stock <= 5 

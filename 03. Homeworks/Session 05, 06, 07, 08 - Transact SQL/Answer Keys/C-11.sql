@@ -1,3 +1,1 @@
-SELECT * FROM Orders
-WHERE 
-	[PaymentType] = 'CASH'
+SELECT * FROM Orders WHERE [PaymentType] = 'CASH' 

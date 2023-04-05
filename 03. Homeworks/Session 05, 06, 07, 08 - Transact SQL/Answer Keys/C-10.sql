@@ -1,4 +1,5 @@
-SELECT * FROM Orders
-WHERE 
-	[Status] = 'CANCELED'
-	AND CreatedDate = GETDATE()
+SELECT *
+FROM Orders
+WHERE
+    [Status] = 'CANCELED'
+    AND CreatedDate = GETDATE()

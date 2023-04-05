@@ -1,3 +1,1 @@
-SELECT * FROM Orders
-WHERE 
-	[Status] = 'CANCELED'
+SELECT * FROM Orders WHERE [Status] = 'CANCELED' 

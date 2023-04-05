@@ -1,2 +1,1 @@
-SELECT * FROM Products
-WHERE Discount <= 10
+SELECT * FROM Products WHERE Discount <= 10 

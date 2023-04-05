@@ -1,3 +1,1 @@
-﻿SELECT * FROM Orders
-WHERE 
-	ShippingCity = N'Hà Nội'
+﻿SELECT * FROM Orders WHERE ShippingCity = N'Hà Nội' 

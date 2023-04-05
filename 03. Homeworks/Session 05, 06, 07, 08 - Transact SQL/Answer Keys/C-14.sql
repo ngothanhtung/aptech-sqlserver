@@ -1,2 +1,1 @@
-SELECT * FROM Employees
-WHERE YEAR(Birthday) = 1990
+SELECT * FROM Employees WHERE YEAR(Birthday) = 1990 

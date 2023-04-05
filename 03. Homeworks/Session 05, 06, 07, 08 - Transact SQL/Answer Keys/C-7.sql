@@ -1,2 +1,1 @@
-SELECT * FROM Orders
-WHERE [Status] = 'COMPLETED'
+SELECT * FROM Orders WHERE [Status] = 'COMPLETED' 

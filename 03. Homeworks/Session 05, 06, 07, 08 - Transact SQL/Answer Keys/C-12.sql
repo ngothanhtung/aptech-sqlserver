@@ -1,3 +1,1 @@
-SELECT * FROM Orders
-WHERE 
-	[PaymentType] = 'CREDIT CARD'
+SELECT * FROM Orders WHERE [PaymentType] = 'CREDIT CARD' 

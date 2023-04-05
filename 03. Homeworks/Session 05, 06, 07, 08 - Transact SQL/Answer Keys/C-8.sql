@@ -1,4 +1,5 @@
-SELECT * FROM Orders
-WHERE 
-	[Status] = 'COMPLETED'
-	AND CreatedDate = GETDATE()
+SELECT *
+FROM Orders
+WHERE
+    [Status] = 'COMPLETED'
+    AND CreatedDate = GETDATE()

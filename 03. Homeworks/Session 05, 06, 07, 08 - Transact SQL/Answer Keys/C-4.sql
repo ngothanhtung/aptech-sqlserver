@@ -1,2 +1,1 @@
-﻿SELECT * FROM Customers
-WHERE [Address] LIKE N'%Hải Châu%'
+﻿SELECT * FROM Customers WHERE [Address] LIKE N'%Hải Châu%' 
