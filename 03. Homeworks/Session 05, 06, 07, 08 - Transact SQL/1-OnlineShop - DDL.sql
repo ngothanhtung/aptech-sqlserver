@@ -4,7 +4,7 @@ CREATE TABLE [Categories]
 	[Id] INT PRIMARY KEY IDENTITY(1, 1),
 	[Name] NVARCHAR(100) UNIQUE NOT NULL,
 	[Description] NVARCHAR(500)
-)
+);
 GO
 -- Suppliers
 CREATE TABLE [Suppliers]
@@ -14,7 +14,7 @@ CREATE TABLE [Suppliers]
 	[PhoneNumber] VARCHAR(50),
 	[Address] NVARCHAR(500) NOT NULL,
 	[Email] VARCHAR(50) UNIQUE NOT NULL,
-)
+);
 GO
 -- Customers
 CREATE TABLE [Customers]
@@ -26,7 +26,7 @@ CREATE TABLE [Customers]
 	[Address] NVARCHAR(500) NOT NULL,
 	[Email] VARCHAR(50) UNIQUE NOT NULL,
 	[Birthday] DATETIME
-)
+);
 GO
 -- Employees
 CREATE TABLE [Employees]
@@ -38,7 +38,7 @@ CREATE TABLE [Employees]
 	[Address] NVARCHAR(500) NOT NULL,
 	[Email] VARCHAR(50) UNIQUE NOT NULL,
 	[Birthday] DATETIME
-)
+);
 GO
 -- Products
 CREATE TABLE Products 
@@ -51,7 +51,7 @@ CREATE TABLE Products
 	[Description] NVARCHAR(MAX),
 	[CategoryId] INT NOT NULL REFERENCES [Categories](Id),
 	[SupplierId] INT NOT NULL REFERENCES [Suppliers](Id),
-)
+);
 GO
 -- Orders
 CREATE TABLE Orders
@@ -66,7 +66,7 @@ CREATE TABLE Orders
 	[PaymentType] VARCHAR(20) NOT NULL DEFAULT('CASH'), CHECK([PaymentType] IN ('CREDIT CARD', 'CASH')),
 	[CustomerId] VARCHAR(50) NOT NULL REFERENCES [Customers](Id),
 	[EmployeeId] VARCHAR(50) NOT NULL REFERENCES [Employees](Id)
-)
+);
 GO
 -- OrderDetails
 CREATE TABLE [OrderDetails]
@@ -74,6 +74,8 @@ CREATE TABLE [OrderDetails]
 	[Id] INT PRIMARY KEY IDENTITY(1, 1),
 	[OrderId] INT NOT NULL REFERENCES [Orders](Id),
 	[ProductId] INT NOT NULL REFERENCES [Products](Id),
-	[Quantity] DECIMAL(18, 2) NOT NULL, CHECK([Quantity] > 0)
-)
+	[Quantity] DECIMAL(18, 2) NOT NULL, CHECK([Quantity] > 0),
+	[Price] MONEY NOT NULL, CHECK ([Money] > 0),
+	[Discount] DECIMAL(18, 2) NOT NULL DEFAULT(0), CHECK ([Discount] >= 0 AND [Discount] <= 90)
+);
 GO
